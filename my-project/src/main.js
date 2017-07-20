@@ -2,10 +2,17 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-// import router from './router'
-import '@/assets/css/app'
+// import '@/assets/css/app'
 import router from '@/router'
+import Axios from 'axios'
+import VueAxios from 'vue-axios'
+// import '@/assets/css/app'
+import './assets/css/bootstrap.min'
+Vue.use(VueAxios,Axios)
 Vue.config.productionTip = false
+
+// import jsonp from 'jsonp'
+// Vue.use(jsonp)
 
 /* eslint-disable no-new */
 new Vue({

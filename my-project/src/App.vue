@@ -1,20 +1,24 @@
 <template>
   <div>
-    
+      <!--<router-link to="/shop">to shap</router-link>-->
+  <myheader></myheader>
+  <mynav></mynav>
      
-      
     <router-view class="text-center"></router-view>
   </div>
 </template>
 
 <script>
- 
- 
- 
+
+import MyHeader from '@/components/MyHeader'
+import Navbar from  '@/components/Navbar'
 export default {
   name: 'app',
   components:{
+    myheader:MyHeader,
+    mynav:Navbar
   }
+
 }
 </script>
 
