@@ -96,7 +96,8 @@ export default {
     components:{
         myheader:MyHeader,
         mynav:Navbar,
-        myshop:shop
+        myshop:shop,
+        
     },
   methods: {
       getGoods (){

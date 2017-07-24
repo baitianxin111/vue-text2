@@ -3,6 +3,7 @@
       <!--<router-link to="/shop">to shap</router-link>-->
   <myheader></myheader>
   <mynav></mynav>
+  <myfooter></myfooter>
      
     <router-view class="text-center"></router-view>
   </div>
@@ -12,11 +13,13 @@
 
 import MyHeader from '@/components/MyHeader'
 import Navbar from  '@/components/Navbar'
+import Footer from '@/components/Footer'
 export default {
   name: 'app',
   components:{
     myheader:MyHeader,
-    mynav:Navbar
+    mynav:Navbar,
+    myfooter:Footer
   }
 
 }

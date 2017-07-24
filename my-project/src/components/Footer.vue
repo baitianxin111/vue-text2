@@ -1,12 +1,16 @@
 <template>
-     
+<div >
+13254r3tre
+    <br/>
+</div>
+
 </template>
 
 
 <script>
 
 export default {
-  name: 'Footer'
+  
 }
 </script>
 
