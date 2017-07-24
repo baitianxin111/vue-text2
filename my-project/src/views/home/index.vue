@@ -47,10 +47,9 @@
        <br/>
 
     <ul>
-      <li v-for="item in msg">
-        <img v-bind:src="item.goods_thumb" v-show="nextt"  @click="next()" >
+      <li v-for="item in msg" @click=next(item.goods_id)>
+        <img v-bind:src="item.goods_thumb"  alt='item.goods_id'>
         <a href="shop"  ></a>
-
         <!--<router-link :to="{ name: 'user', params: { userId: item.brand_id }}">User</router-link>-->
         <p>{{item.goods_name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.star_number}}</p>
 
@@ -86,14 +85,13 @@ export default {
             },
             msg:'',
             mydata:{
-              showcom: false
+              
             }
         }
     },
   created (){
         this.getGoods(),
-        this.getJsonp,
-          this.next()
+        this.getJsonp
   },
     components:{
         myheader:MyHeader,
@@ -114,12 +112,12 @@ export default {
             })
 
       },
-    onclick(){
-          this.showcom = true;
-    },
-    next(){
-      nextt = !nextt;
-    },
+      next (str){
+        // 传递路由
+        const path = '/shop/' + str;
+        this.$router.push({path:path})
+        console.log(str)
+      },
     getJsonp (){
           jsonp('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',null,function (err,data) {
               if (err){

@@ -21,7 +21,7 @@ export default new Router({
       // ]
     },
     {
-      path: '/shop',
+      path: '/shop/:id',
       component: Shop
     },
     {
