@@ -9,8 +9,16 @@ import VueAxios from 'vue-axios'
 import VueRouse from 'vue-resource'
 // import '@/assets/css/app'
 import './assets/css/bootstrap.min'
+
+import ElementUI from 'element-ui'
+import { Button, Select,InputNumber } from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
 // Vue.use(VueAxios,Axios)
 Vue.config.productionTip = false
+ Vue.use(Button)
+ Vue.use(Select)
+ Vue.use(InputNumber)
+Vue.use(ElementUI)
 Vue.use(VueRouse)
 
 // import jsonp from 'jsonp'
